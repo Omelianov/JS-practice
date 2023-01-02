@@ -65,3 +65,48 @@
 //     return message;
 //   }
 //   console.log(storage);
+
+function getDiscount(totalSpent) {
+  const BASE_DISCOUNT = 0;
+  const BRONZE_DISCOUNT = 0.02;
+  const SILVER_DISCOUNT = 0.05;
+  const GOLD_DISCOUNT = 0.1;
+  let discount;
+  // Change code below this line
+if (totalSpent >= 50000) {
+  discount = GOLD_DISCOUNT;
+} else if (totalSpent < 50000 && totalSpent >= 20000) {
+  discount = SILVER_DISCOUNT;
+} else if (totalSpent < 20000 && totalSpent >= 5000) {
+  discount = BRONZE_DISCOUNT;
+} else if (totalSpent <= 5000) {
+  discount = BASE_DISCOUNT;
+}
+  // Change code above this line
+  return discount;
+}
+
+// задача 28
+
+function checkPassword(password) {
+  const ADMIN_PASSWORD = "jqueryismyjam";
+  let message;
+  // Change code below this line
+
+  switch (password) {
+    case (password) = null:
+      // если указываем ===, то решение не правильно
+    message = "Canceled by user!";
+    break;
+
+    case password = ADMIN_PASSWORD:
+    message = "Welcome!"
+    break;
+
+    default:
+    message = "Access denied, wrong password!";
+  }       
+  // Change code above this line
+  return message;
+}
+
