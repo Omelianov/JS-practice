@@ -38,15 +38,45 @@
 //    }
 //    console.log(checkForName('Петров Саша', 'саша'));
 
-console.log('ok');
+// console.log('ok');
 
-function checkForSpam(message) {
-    let result;
-    // Change code below this line
-  messageToLowerCase = message.toLowerCase();
-  result = messageToLowerCase.includes('spam') || messageToLowerCase.includes('sale');
-    // Change code above this line
-    return result;
-  }
+// function checkForSpam(message) {
+//     let result;
+//     // Change code below this line
+//   messageToLowerCase = message.toLowerCase();
+//   result = messageToLowerCase.includes('spam') || messageToLowerCase.includes('sale');
+//     // Change code above this line
+//     return result;
+//   }
 
-  console.log(checkForSpam("Amazing SalE, only tonight!"));
+//   console.log(checkForSpam("Amazing SalE, only tonight!"));
+
+// function getExtremeElements(array) {
+//     // Change code below this line
+//   const firstElement = array[0];
+//   const lastElement = array[array.length-1];
+//   console.log(lastElement);
+//    let result = `${firstElement}, ${lastElement}`;
+//     return result;
+//     // Change code above this line
+//   }
+//   console.log(getExtremeElements(['apple', 'peach', 'pear', 'banana']));
+
+// function getExtremeElements(array) {
+//     // Change code below this line
+//     return [array[0],array[array.length-1]]
+//     // Change code above this line
+//   }
+//   console.log(getExtremeElements(['apple', 'peach', 'pear', 'banana']));
+
+
+// function splitMessage(message, delimiter) {
+//   let words;
+//   // Change code below this line
+// words = message.split(delimiter);
+//   // Change code above this line
+//   return words;
+// }
+// console.log(splitMessage("best_for_week", "_"));
+
+
