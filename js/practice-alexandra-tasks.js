@@ -1,5 +1,3 @@
-
-
 // 1. 
 // - Запроси у пользователя ввести его возраст в всплывающем окне браузера.
 // - Проверь введенные пользователем данные:
@@ -8,7 +6,7 @@
 // -- если число от 65 и выше - предложить пользователю связаться с центром обслуживания,
 // -- если введено не число, вывести сообщение об ошибке.
 
-console.log('ok');
+// console.log('ok');
 
 // let userInput = prompt('Enter your age please');
 // console.log('AGE:', userInput, typeof userInput, isNaN(userInput));
@@ -175,17 +173,58 @@ console.log('ok');
 // - "Теория — это когда все известно, но ничего не работает. Практика — это когда все работает, но никто не знает почему. Мы же объединяем теорию и практику: ничего не работает… и никто не знает почему!"
 // - "Образование — это то, что остаётся после того, как забывается всё выученное в школе."
 
+
 // let uInput = prompt ('Enter text here')
-let uInput = 'Есть только две бесконечные вещи: Вселенная и глупость. Хотя насчет Вселенной я не уверен.';
-let uInputToLowerCase = uInput.toLowerCase();
-console.log(uInputToLowerCase);
-let uInputSplit = uInput.split('');
-console.log(uInputSplit);
-const vowelsLetters = [ёуеыаоэяию];
-uInputSplit.filter(vowelsLetters); 
+// function countVowels(uInput) {
+//   let counter = 0;
+
+//   for (let i = 0; i < uInput.length; i++) {
+//     switch (uInput[i].toLowerCase()) {
+//       case "а":
+//       case "о":
+//       case "у":
+//       case "ы":
+//       case "э":
+//       case "я":
+//       case "ё":
+//       case "ю":
+//       case "и":
+//       case "е": 
+//         counter++;
+//         break;
+
+//       default:
+//         break;
+//     }
+//   }
+//   return counter;
+// }
+// console.log(countVowels(uInput));
+
+
+
+// // let uInput = prompt ('Enter text here')
+// let uInput = 'Есть только две бесконечные вещи: Вселенная и глупость. Хотя насчет Вселенной я не уверен.';
+// let uInputToLowerCase = uInput.toLowerCase();
+// console.log(uInputToLowerCase);
+// let uInputSplit = uInput.split('');
+// console.log(uInputSplit);
+// const vowelsLetters = ['ё','у', 'е','ы','а','о','э','я','и','ю'];
+
+// const result = uInputToLowerCase.filter(vowelsLetters);
+
+// console.log(result);
+
+// if (vowelsLetters == uInputSplit) {
+
+//     let filtered = ; 
+
+// }
 
 
 // ====================================================================
+
+
 
 
 // 7. 
@@ -193,3 +232,31 @@ uInputSplit.filter(vowelsLetters);
 // - Выведи ответ пользователю с информацией:
 // был ли этот год високосным и через сколько лет наступит его год по Восточному календарюю.
 // Если пользователь указал дату в неверном формате, попроси его ввести ее снова, если он нажал cancel, то не запрашивай.
+
+
+
+// <!--             год является високосным, если он кратен 4 и при этом не кратен 100 либо кратен 400.
+//             для проверки годы 1700, 1800 и 1900 не были високосными, 
+//             так как они кратны 100 и не кратны 400. Год 2000 — високосный, так как он кратен 400. 
+//             2100, 2200 и 2300 — не високосные -->
+
+
+let userInput = +prompt("Please enter your birth date in this format dd.mm.yyyy")
+let cancelValue = isNaN(userInput); // null => false
+if (cancelValue) {
+    alert("Please enter again your birth date in this format dd.mm.yyyy")
+}
+else if (userInput) {
+    userInput % 4 == 0 && userInput % 100 !== 0 || userInput % 400 == 0;
+    alert(`<p style='color: green'> ${userInput} year is the leap year! </p>`)
+} else {
+    alert(`<p style='color: red'> ${userInput} year is not the leap year! </p>`)
+}
+
+
+
+
+// console.log('checkedValue:', checkedValue);
+// // '2' < 18
+// if (cancelValue) {
+//     alert('Incorrect number! Please enter the number')
