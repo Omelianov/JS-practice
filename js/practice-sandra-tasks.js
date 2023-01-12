@@ -1,4 +1,4 @@
-// 1. 
+// 1.
 // - Запроси у пользователя ввести его возраст в всплывающем окне браузера.
 // - Проверь введенные пользователем данные:
 // -- если это число от 0 до 18, не включая 18, то выведи в ответ сообщение, что далее он не может пользоваться данным ресурсом,
@@ -174,30 +174,30 @@
 // - "Образование — это то, что остаётся после того, как забывается всё выученное в школе."
 
 
-// let uInput = prompt ('Enter text here')
+// let uInput = prompt('Enter text here')
 // function countVowels(uInput) {
-//   let counter = 0;
+//     let counter = 0;
 
-//   for (let i = 0; i < uInput.length; i++) {
-//     switch (uInput[i].toLowerCase()) {
-//       case "а":
-//       case "о":
-//       case "у":
-//       case "ы":
-//       case "э":
-//       case "я":
-//       case "ё":
-//       case "ю":
-//       case "и":
-//       case "е": 
-//         counter++;
-//         break;
+//     for (let i = 0; i < uInput.length; i++) {
+//         switch (uInput[i].toLowerCase()) {
+//             case "а":
+//             case "о":
+//             case "у":
+//             case "ы":
+//             case "э":
+//             case "я":
+//             case "ё":
+//             case "ю":
+//             case "и":
+//             case "е":
+//                 counter++;
+//                 break;
 
-//       default:
-//         break;
+//             default:
+//                 break;
+//         }
 //     }
-//   }
-//   return counter;
+//     return counter;
 // }
 // console.log(countVowels(uInput));
 
@@ -241,17 +241,18 @@
 //             2100, 2200 и 2300 — не високосные -->
 
 
-let userInput = +prompt("Please enter your birth date in this format dd.mm.yyyy")
-let cancelValue = isNaN(userInput); // null => false
-if (cancelValue) {
-    alert("Please enter again your birth date in this format dd.mm.yyyy")
-}
-else if (userInput) {
-    userInput % 4 == 0 && userInput % 100 !== 0 || userInput % 400 == 0;
-    alert(`<p style='color: green'> ${userInput} year is the leap year! </p>`)
-} else {
-    alert(`<p style='color: red'> ${userInput} year is not the leap year! </p>`)
-}
+// let userInput = +prompt("Please enter your birth date in this format dd.mm.yyyy")
+
+// let cancelValue = isNaN(userInput); // null => false
+// if (cancelValue) {
+//     alert("Please enter again your birth date in this format dd.mm.yyyy")
+// }
+// else if (userInput) {
+//     userInput % 4 == 0 && userInput % 100 !== 0 || userInput % 400 == 0;
+//     alert(`<p style='color: green'> ${userInput} year is the leap year! </p>`)
+// } else {
+//     alert(`<p style='color: red'> ${userInput} year is not the leap year! </p>`)
+// }
 
 
 
@@ -260,3 +261,8 @@ else if (userInput) {
 // // '2' < 18
 // if (cancelValue) {
 //     alert('Incorrect number! Please enter the number')
+
+
+
+
+

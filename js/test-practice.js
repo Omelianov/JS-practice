@@ -5,6 +5,7 @@
 // const firstElement = (courseTopic[0]);
 // const lastElement =(courseTopic[courseTopic.length -1]);
 
+// ==========================Задача============================================================================
 
 // function formatMessage(message, maxLength) {
 //   let result;
@@ -20,16 +21,18 @@
 // console.log(formatMessage('Nunc sed turpis a felis in nunc fringilla',30));
 
 
+// ==========================Задача============================================================================
 
 
 // function normalizeInput(input) {
 //     const normalizedInput = input.toLowerCase() ; // Change this line
-  
+
 //     return normalizedInput;
 //   }
 
 //   console.log(normalizeInput('MoNdEo'));
 
+// ==========================Задача============================================================================
 
 
 // function checkForName(fullName, name) {
@@ -39,6 +42,9 @@
 //    console.log(checkForName('Петров Саша', 'саша'));
 
 // console.log('ok');
+
+// ==========================Задача============================================================================
+
 
 // function checkForSpam(message) {
 //     let result;
@@ -50,6 +56,10 @@
 //   }
 
 //   console.log(checkForSpam("Amazing SalE, only tonight!"));
+
+
+// ==========================Задача============================================================================
+
 
 // function getExtremeElements(array) {
 //     // Change code below this line
@@ -70,6 +80,8 @@
 //   console.log(getExtremeElements(['apple', 'peach', 'pear', 'banana']));
 
 
+// ==========================Задача============================================================================
+
 // function splitMessage(message, delimiter) {
 //   let words;
 //   // Change code below this line
@@ -80,3 +92,40 @@
 // console.log(splitMessage("best_for_week", "_"));
 
 
+// ==========================Задача============================================================================
+
+
+// function calculateEngravingPrice(message, pricePerWord) {
+//     // Change code below this line
+//     let separatedWords;
+//     separatedWords = message.split(" ");
+//     console.log(separatedWords);
+//     let engravingPrice = pricePerWord * separatedWords.length;
+//     return (engravingPrice);
+
+
+//     // Change code above this line
+// }
+// console.log(calculateEngravingPrice("Web-development is creative work", 20));
+
+
+// ==========================Задача============================================================================
+
+
+
+// `Напишите функцию initSnake(str), которая преобразует стиль написания составных
+// слов строки из CamelCase в snake_case, при котором несколько слов разделяются
+// символом подчеркивания(_), причём каждое слово пишется с маленькой буквы.`
+
+
+function initSnake(str) {
+    let result = str.replace(/([A-Z])/g, " $1");
+    return result.split(' ').join('_').toLowerCase().substring(1);
+}
+
+console.log(initSnake('CamelCaseIsMoreFunToReadThenSnakeCase'));
+
+
+
+
+// ==========================Задача============================================================================
