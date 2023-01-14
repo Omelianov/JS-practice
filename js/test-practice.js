@@ -103,6 +103,10 @@
 //     let engravingPrice = pricePerWord * separatedWords.length;
 //     return (engravingPrice);
 
+// or
+
+// return message.split(' ').length * pricePerWord;
+
 
 //     // Change code above this line
 // }
@@ -118,12 +122,89 @@
 // символом подчеркивания(_), причём каждое слово пишется с маленькой буквы.`
 
 
-function initSnake(str) {
-    let result = str.replace(/([A-Z])/g, " $1");
-    return result.split(' ').join('_').toLowerCase().substring(1);
-}
+// function initSnake(str) {
+//     let result = str.replace(/([A-Z])/g, " $1");
+//     return result.split(' ').join('_').toLowerCase().substring(1);
+//                                                     // или можно .slise(1)
+// }
 
-console.log(initSnake('CamelCaseIsMoreFunToReadThenSnakeCase'));
+// console.log(initSnake('CamelCaseIsMoreFunToReadThenSnakeCase'));
+
+
+
+
+// ==========================Задача============================================================================
+
+// function slugify(title) {
+//    let slug = title.toLowerCase(); 
+//    console.log(slug);
+//   return slug.replaceAll(' ','-');
+  
+// //   return title.replaceAll(' ', '-').toLowerCase();
+//   }
+//   console.log(slugify('Ten secrets of JavaScript'));
+
+
+
+// function slugify(title) {
+//   // Change code below this line
+// let slug = title.toLowerCase().split(' '); 
+//   return slug.join('-');
+//   // Change code above this line
+// }
+
+
+
+
+
+// ==========================Задача============================================================================
+// 17
+// console.log("ok");
+// function makeArray(firstArray, secondArray, maxLength) {
+//     // Change code below this line  
+//   let NewArray = firstArray.concat(secondArray);
+// console.log(NewArray);
+//   if (NewArray.length > maxLength) {
+//  NewArray = NewArray.slice(0,maxLength);
+// }
+// return NewArray;
+// }
+// console.log(makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4));
+
+
+// ==========================Задача============================================================================
+
+function calculateTotal(number) {
+    // Change code below this line
+     let total = 0;
+   for (let i = 1; i <= number; i++) {
+     total+=i;
+   }
+     return total;
+}
+console.log(calculateTotal(5));
+
+
+
+// ==========================Задача============================================================================
+
+
+
+
+
+
+
+// ==========================Задача============================================================================
+
+
+
+
+
+
+// ==========================Задача============================================================================
+
+
+
 
 
 
