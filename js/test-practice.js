@@ -139,7 +139,7 @@
 //    let slug = title.toLowerCase(); 
 //    console.log(slug);
 //   return slug.replaceAll(' ','-');
-  
+
 // //   return title.replaceAll(' ', '-').toLowerCase();
 //   }
 //   console.log(slugify('Ten secrets of JavaScript'));
@@ -174,22 +174,105 @@
 
 // ==========================Задача============================================================================
 
-function calculateTotal(number) {
-    // Change code below this line
-     let total = 0;
-   for (let i = 1; i <= number; i++) {
-     total+=i;
-   }
-     return total;
-}
-console.log(calculateTotal(5));
+// function calculateTotal(number) {
+//     // Change code below this line
+//      let total = 0;
+//    for (let i = 0; i <= number; i++) {
+//      total+=i;
+//    }
+//      return total;
+// }
+// console.log(calculateTotal(5));
 
 
 
 // ==========================Задача============================================================================
 
+// Find Longhest word in the string
 
 
+
+// function findLongestWord(string) {
+//   // Change code below this line
+
+//   let stringSplit = string.split(" ");
+//   let wordlength = 0;
+//   let longestWordInString;
+//   for (let i = 0; i < stringSplit.length; i++) {
+//     wordlength = stringSplit.length;
+//     if (stringSplit[i].length > wordlength) {
+//       longestWordInString = stringSplit[i];
+//       return longestWordInString;
+//     }
+//   }
+
+// function findLongestWord(string) {
+//   let wordlength = 0;
+//   let longestWordInString;
+//   const stringSplit = string.split(' ');
+
+//   for (let i = 0; i < stringSplit.length; i++) {
+//     let word = stringSplit[i];
+//     if (word.length > wordlength) {
+//       wordlength = word.length;
+//       longestWordInString = wordlength;
+//     }
+//   }
+//   return wordlength;
+// }
+
+
+
+
+
+
+
+
+// Самый лучший вариант!!!!!
+
+function findLongestWord(string) {
+
+  const stringSplit = string.split(' ');
+  let longestWordInString = stringSplit[0];
+
+  for (let i = 0; i < stringSplit.length; i++) {
+
+    if (longestWordInString.length < stringSplit[i].length) {
+      longestWordInString = stringSplit[i];
+    }
+  }
+  return longestWordInString;
+}
+
+// Change code above this line
+
+
+console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+
+//   // Change code above this line
+// }
+
+// const findLongestWord = function (str) {
+//   let arrStr = str.split(' ');
+//   let wordLength = 0;
+//   let longestWord;
+
+//   for (let i = 0; i < arrStr.length; i += 1) {
+//     wordLength = arrStr[1].length;
+
+//     if (arrStr[i].length > wordLength) {
+//       longestWord = arrStr[i];
+
+//       return longestWord;
+//     }
+
+//   }
+// };
+
+// // Вызовы функции для проверки
+// console.log(
+//   findLongestWord("May the force be with you")
+// ); // вернет 'jumped'
 
 
 
