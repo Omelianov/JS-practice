@@ -230,24 +230,24 @@
 
 // Самый лучший вариант!!!!!
 
-function findLongestWord(string) {
+// function findLongestWord(string) {
 
-  const stringSplit = string.split(' ');
-  let longestWordInString = stringSplit[0];
+//   const stringSplit = string.split(' ');
+//   let longestWordInString = stringSplit[0];
 
-  for (let i = 0; i < stringSplit.length; i++) {
+//   for (let i = 0; i < stringSplit.length; i++) {
 
-    if (longestWordInString.length < stringSplit[i].length) {
-      longestWordInString = stringSplit[i];
-    }
-  }
-  return longestWordInString;
-}
+//     if (longestWordInString.length < stringSplit[i].length) {
+//       longestWordInString = stringSplit[i];
+//     }
+//   }
+//   return longestWordInString;
+// }
 
-// Change code above this line
+// // Change code above this line
 
 
-console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+// console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
 
 //   // Change code above this line
 // }
@@ -279,17 +279,143 @@ console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
 
 // ==========================Задача============================================================================
 
+// Дополни код функции createArrayOfNumbers(min, max) так, чтобы она возвращала массив всех целых чисел от значения min до max.
 
 
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+//   for (let i = min; i <= max; i++)
+//     numbers.push(i);
+//   return numbers;
+// }
 
+// console.log(createArrayOfNumbers(1, 3));
+// console.log(createArrayOfNumbers(14, 17));
+// console.log(createArrayOfNumbers(29, 34));
+
+// ==========================Задача============================================================================
+// Напиши функцию filterArray(numbers, value), которая принимает массив чисел(параметр numbers) и возвращает новый массив, в котором будут только те элементы массива numbers, которые больше чем значение параметра value(число).
+
+// function filterArray(numbers, value) {
+
+//     const newArray = [];
+
+//     for (let i = 0; i < numbers.length; i++) {
+//         if (numbers[i] > value) {
+//             newArray.push(numbers[i])
+//         }
+//     }
+//     return newArray
+// }
+
+// console.log(filterArray([12, 24, 8, 41, 76], 20));
+// console.log(filterArray([12, 24, 8, 41, 76], 38));
+// console.log(filterArray([1, 23, 2, 3, 4, 5, 6, 34], 3));
+// console.log(filterArray([1, 2, 3, 4, 5], 4));
+// console.log(filterArray([1, 2, 3, 4, 5], 5));
+
+
+// ==========================Задача============================================================================
+// Напиши функцию getCommonElements(array1, array2) которая получает два 
+// массива произвольной длины в параметры array1 и array2, и возвращает новый
+// массив, состоящий из тех элементов, которые присутствуют в обоих исходных
+// массивах.
+
+// function getCommonElements(array1, array2) {
+//     // Change code below this line
+//     const newArray = [];
+
+//     for (let i = 0; i < array1.length; i++) {
+//         if (array2.includes(array1[i])) {
+//             newArray.push(array1[i])
+//         }
+//     }
+//     return newArray
+
+
+//     // Change code above this line
+// }
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
+// console.log(getCommonElements([1, 2, 3], [10, 20, 30]));
+
+// ==========================Задача============================================================================
+
+// let time = +prompt("Введите время в минутах");
+// let timeHours = Math.floor(time / 60);
+// let modifyHours = String(timeHours).padStart(2, "0");
+// let timeMinutes = time % 60;
+// let modifyMinutes = String(timeMinutes).padStart(2, "0");
+
+// console.log(timeHours);
+// console.log(`${modifyHours}:${modifyMinutes}`);
 
 
 // ==========================Задача============================================================================
 
+// function calculateTotalPrice(order) {
+//     let total = 0;
+//     // Change code below this line
+
+//     for (let i of order) {
+//         total += i;
+//     }
+
+//     // Change code above this line
+//     return total;
+// }
+
+// console.log(calculateTotalPrice([25, 5]));
+
+
+// ==========================Задача============================================================================
+// Напиши функцию getEvenNumbers(start, end) которая 
+// возвращает массив всех чётных чисел от start до end. Чётным считается число которое делится на 2 без остатка(10 % 2 === 0).
+// 
+// function getEvenNumbers(start, end) {
+//     // Change code below this line
+//     let numbers = [];
+//     for (let i = start; i <= end; i++) {
+//         if (i % 2 === 0) {
+//             numbers.push(i);
+//         }
+//     }
+//     return numbers;
+
+//     // Change code above this line
+// }
+// console.log(getEvenNumbers(6, 12));
+
+
+// ==========================Задача============================================================================
+// Напиши функцию includes(array, value), которая делает тоже
+// самое, что и метод массива массив.includes(значение) -
+//     проверяет, есть ли в массиве array значение value,
+//         возвращая true если есть и false в противном случае.
+
+// При выполнении этой задачи в теле функции includes() нельзя 
+// использовать метод массив.includes(значение).
+
+
+// return array.indexOf(value) > 0 ? true : false; - одно из крадких решений
 
 
 
+// function includes(array, value) {
+//     // Change code below this line
 
+//     for (let i = 0; i <= array.length; i++) {
+//         if (array[i] === value) {
+//             return true;
+//         }
+//     }
+//     return false;
+//     // Change code above this line
+// }
+// console.log(includes(['apple', 'plum', 'pear', 'orange'], 'plum'));
+
+
+
+// ==========================Задача============================================================================
 
 
 // ==========================Задача============================================================================
