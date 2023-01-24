@@ -38,13 +38,13 @@
 
 //!------------ Работа с коллекцией (массивом объектов) -----------------------------
 
-const friends = [
-    { name: 'Mango', online: false },
-    { name: 'Kiwi', online: true },
-    { name: 'Poly', online: true },
-    { name: 'Ajax', online: false },
-];
-console.table(friends);
+// const friends = [
+//     { name: 'Mango', online: false },
+//     { name: 'Kiwi', online: true },
+//     { name: 'Poly', online: true },
+//     { name: 'Ajax', online: false },
+// ];
+// console.table(friends);
 
 // for (const friend of friends) {
 //     console.log(friend);
@@ -148,3 +148,41 @@ console.table(friends);
 //     return friendsByStatus;
 // }
 // console.log(getFriendsByStatus(friends));
+
+
+
+// !Операция spread (...) (распыление) -------------------------
+
+const numbers = [0, 5, 10, ...[1, 2, 3], 4, 5];
+console.log(numbers);
+
+
+
+// *поиск самого маленького и самого большого числа 
+
+const temps = [18, 14, 12, 23, 43, 10, 5];
+
+console.log(Math.max(...temps));
+console.log(Math.min(...temps));
+
+
+// !Если элементы в массиве простые (примитивы), то автоматически создается копия элементов и 
+// работаем с копией, а если элементы в массиве являются объектами (являюся сложными типами), то создаются
+// ссылки на эти элементы.
+
+const a = [{ x: 1 }, { y: 2 }, { z: 3 }];
+
+// в массив b распаковали или распылили массив a, не скопировали, 
+//     а именно создали ссылки
+const b = [...a]
+
+console.log(a);
+console.log(b);
+
+// если изменить значение x, то он измениться и в a и в b;
+a[0].x = 1000;
+
+console.log(a);
+console.log(b);
+
+// *Сшиваем несколько массивов в один через concat() и spread
