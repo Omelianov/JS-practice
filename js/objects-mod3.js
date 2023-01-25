@@ -153,36 +153,220 @@
 
 // !Операция spread (...) (распыление) -------------------------
 
-const numbers = [0, 5, 10, ...[1, 2, 3], 4, 5];
-console.log(numbers);
+// const numbers = [0, 5, 10, ...[1, 2, 3], 4, 5];
+// console.log(numbers);
 
 
 
-// *поиск самого маленького и самого большого числа 
+// // *поиск самого маленького и самого большого числа 
 
-const temps = [18, 14, 12, 23, 43, 10, 5];
+// const temps = [18, 14, 12, 23, 43, 10, 5];
 
-console.log(Math.max(...temps));
-console.log(Math.min(...temps));
+// console.log(Math.max(...temps));
+// console.log(Math.min(...temps));
 
 
-// !Если элементы в массиве простые (примитивы), то автоматически создается копия элементов и 
-// работаем с копией, а если элементы в массиве являются объектами (являюся сложными типами), то создаются
-// ссылки на эти элементы.
+// // !Если элементы в массиве простые (примитивы), то автоматически создается копия элементов и 
+// // работаем с копией, а если элементы в массиве являются объектами (являюся сложными типами), то создаются
+// // ссылки на эти элементы.
 
-const a = [{ x: 1 }, { y: 2 }, { z: 3 }];
+// const a = [{ x: 1 }, { y: 2 }, { z: 3 }];
 
-// в массив b распаковали или распылили массив a, не скопировали, 
-//     а именно создали ссылки
-const b = [...a]
+// // в массив b распаковали или распылили массив a, не скопировали, 
+// //     а именно создали ссылки
+// const b = [...a]
 
-console.log(a);
-console.log(b);
+// console.log(a);
+// console.log(b);
 
-// если изменить значение x, то он измениться и в a и в b;
-a[0].x = 1000;
+// // если изменить значение x, то он измениться и в a и в b;
+// a[0].x = 1000;
 
-console.log(a);
-console.log(b);
+// console.log(a);
+// console.log(b);
 
-// *Сшиваем несколько массивов в один через concat() и spread
+// // *Сшиваем несколько массивов в один через concat() и spread
+
+
+// const keys = [];
+// const values = [];
+// const advert = {
+//     service: "apt",
+// };
+// const apartment = Object.create(advert);
+// apartment.descr = "Spacious apartment in the city center";
+// apartment.rating = 4;
+// apartment.price = 2153;
+
+// for (const key in apartment) {
+//     // Change code below this line
+
+//     if (apartment.hasOwnProperty(key)) {
+//         keys.push(key);
+//         values.push(apartment[key]);
+//     }
+
+
+//     // Change code above this line
+// }
+// console.log(apartment);
+
+
+
+
+// Напиши функцию countProps(object), которая считает и возвращает 
+// количество собственных свойств объекта в параметре object.
+// Используй переменную propCount для хранения количества свойств объекта.
+
+// function countProps(object) {
+//     let propCount = 0;
+//     // Change code below this line
+
+//     for (const key in object) {
+//         if (object.hasOwnProperty(key)) {
+//             propCount += 1;
+//         }
+//     }
+
+//     // Change code above this line
+//     return propCount;
+// }
+
+// console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
+
+
+
+
+// function countProps(object) {
+//     // Change code below this line
+//     let propCount = 0;
+
+//     const keys = Object.keys(object);
+//     return Object.keys(object).length;
+//     // Change code above this line
+// }
+
+
+
+// const apartment = {
+//     descr: "Spacious apartment in the city center",
+//     rating: 4,
+//     price: 2153,
+// };
+// // Change code below this line
+// const keys = Object.keys(apartment);
+// const values = Object.values(apartment);
+// console.log(apartment);
+// console.log(keys);
+// console.log(values);
+
+
+
+
+// *Напиши функцию countTotalSalary(salaries) которая принимает объект зарплат,
+//     где имя свойства это имя сотрудника, а значение свойства это зарплата.
+//     Функция должна рассчитать общую сумму зарплат сотрудников и вернуть её.
+//     Используй переменную totalSalary для хранения общей суммы зарплаты.
+
+// function countTotalSalary(salaries) {
+//     let totalSalary = 0;
+//     // Change code below this line
+
+//     const values = Object.values(salaries);
+
+//     for (let value of values) {
+//         totalSalary += value;
+//     }
+
+//     // Change code above this line
+//     return totalSalary;
+// }
+
+// console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
+
+
+
+
+// *Перебери массив объектов colors используя цикл for...of.
+// Добавь в массив hexColors значения свойств hex, а в массив rgbColors 
+// значения свойств rgb из всех объектов массива colors.
+
+// const colors = [
+//     { hex: "#f44336", rgb: "244,67,54" },
+//     { hex: "#2196f3", rgb: "33,150,243" },
+//     { hex: "#4caf50", rgb: "76,175,80" },
+//     { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+
+// for (const color of colors) {
+
+//     hexColors.push(color.hex);
+//     rgbColors.push(color.rgb);
+// }
+
+// console.log(hexColors);
+// console.log(rgbColors);
+
+
+
+// *Напиши функцию getProductPrice(productName) которая принимает один параметр
+// productName - название продукта.Функция ищет объект продукта с таким именем
+//     (свойство name) в массиве products и возвращает его цену(свойство price).
+//     Если продукт с таким названием не найден, функция должна возвращать null.
+
+
+// const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//     // Change code below this line
+
+//     for (const product of products)
+
+//         if (productName === product.name)
+//             return product.price;
+//     return null;
+
+//     // Change code above this line
+// }
+
+// console.log(getProductPrice("Droid"));
+
+
+
+// *Напиши функцию getAllPropValues(propName) которая принимает один параметр
+// propName - имя(ключ) свойства.Функция должна вернуть массив всех значений 
+// свойства с таким именем из каждого объекта в массиве products.
+// Если в объектах нет свойства с таким именем, функция должна вернуть пустой
+// массив.
+
+
+const products = [
+    { name: "Radar", price: 1300, quantity: 4 },
+    { name: "Scanner", price: 2700, quantity: 3 },
+    { name: "Droid", price: 400, quantity: 7 },
+    { name: "Grip", price: 1200, quantity: 9 },
+];
+
+function getAllPropValues(propName) {
+    // Change code below this line
+
+    for (const product of products)
+
+        if (propName === Object.keys(propName))
+            return Object.values(propName);
+    return null;
+
+
+    // Change code above this line
+}
+console.log(getAllPropValues("name"));
+
+// ?????????
