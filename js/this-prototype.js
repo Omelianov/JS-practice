@@ -28,30 +28,60 @@ console.log(pizzaPalace.order("Big Mike"));
 // !======================Task============================================
 
 
-class Storage {
-    constructor(items) {
-        this.items = items;
-    }
+// class Storage {
+//     constructor(items) {
+//         this.items = items;
+//     }
 
-    getItems() {
-        return this.items;
-    }
+//     getItems() {
+//         return this.items;
+//     }
 
-    addItem(newItem) {
-        this.items.push(newItem);
-    }
+//     addItem(newItem) {
+//         this.items.push(newItem);
+//     }
 
-    removeItem(itemToRemove) {
-        this.items = this.items.filter(item => item !== itemToRemove);
-    }
-}
+//     removeItem(itemToRemove) {
+//         this.items = this.items.filter(item => item !== itemToRemove);
+//     }
+// }
 
 
 
 
 // !======================Task============================================
 
+// class StringBuilder {
+//     constructor(value) {
+//         this.value = value;
+//     }
 
+//     getValue() {
+//         return this.value;
+//     }
+
+//     padEnd(str) {
+//         this.value += str;
+//     }
+
+//     padStart(str) {
+//         this.value = str += this.value;
+//     }
+//     padBoth(str) {
+//         this.value = str + this.value + str;
+//     }
+
+// }
+
+// // Change code above this line
+// const builder = new StringBuilder(".");
+// console.log(builder.getValue()); // "."
+// builder.padStart("^");
+// console.log(builder.getValue()); // "^."
+// builder.padEnd("^");
+// console.log(builder.getValue()); // "^.^"
+// builder.padBoth("=");
+// console.log(builder.getValue()); // "=^.^="
 
 
 
