@@ -9,6 +9,7 @@
 //     }
 // }
 
+
 // // Change code above this line
 
 // // Callback for onSuccess
@@ -60,6 +61,24 @@
 //     return filteredNumbers;
 // }
 
+// console.log(filterArray([1, 4, 5, 6, 3, 13], 3));
+
+
+
+// function filterArray(numbers, value) {
+//     const filteredNumbers = [];
+//     // Change code below this line
+
+//     numbers.forEach(function (number) {
+//         if (number > value) {
+//             filteredNumbers.push(number);
+//         }
+//     });
+
+//     // Change code above this line
+//     return filteredNumbers;
+// }
+
 // function getCommonElements(firstArray, secondArray) {
 //     const commonElements = [];
 //     // Change code below this line
@@ -80,6 +99,23 @@
 // Функция changeEven(numbers, value) принимает массив чисел numbers и обновляет каждый элемент, значение которого это чётное число, добавляя к нему значение параметра value.
 
 // Выполни рефакторинг функции так, чтобы она стала чистой - не изменяла массив чисел numbers, а создавала, наполняла и возвращала новый массив с обновлёнными значениями.
+
+// const changeEven = (numbers, value) => {
+//     // Change code below this line
+//     const newArray = [];
+
+//     numbers.forEach(function (number) {
+//         if (number % 2 === 0) {
+//             newArray.push(number = number + value)
+//         } else newArray.push(number)
+//     });
+
+//     return newArray;
+
+//     // Change code above this line
+// }
+// console.log(changeEven([2, 8, 3, 7, 4, 6], 10));
+
 
 // const changeEven = (numbers, value) => {
 //     // Change code below this line
