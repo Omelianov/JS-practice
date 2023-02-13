@@ -35,16 +35,96 @@ console.log("ok");
 // const sortByName = arr.slice().sort((a, b) => { return a.surname > b.surname ? 1 : -1 })
 // console.log(sortByName);
 
-const sortByName = arr.slice().sort((a, b) => a.surname > b.surname ? 1 : -1);
-console.log(sortByName);
+// const sortByName = arr.slice().sort((a, b) => a.surname > b.surname ? 1 : -1);
+// console.log(sortByName);
 
-// Отсортировать ученых по количеству прожитых лет.
-// Удалить из массива ученых, родившихся в 15, 16 или 17 веках.
-// Найти ученого, который родился позже всех.
-// Найти год рождения Albert Einstein.
-// Найти ученых, фамилия которых начинается на букву "С".
-// Удалить из массива всех ученых, имя которых начинается на букву "A".
-// Найти ученого, который прожил больше всех и ученого, который меньше.
+// !Отсортировать ученых по количеству прожитых лет.
+
+// const sortScientistsAgeOfLife = [...arr].sort((min, max) => { const minAge = min.dead - min.born; const maxAge = max.dead - max.born; return minAge - maxAge });
+
+// const sortScientistsAgeOfLife = [...arr].sort((min, max) => (min.dead - min.born) - (max.dead - max.born));
+
+
+// console.log(sortScientistsAgeOfLife);
+// console.log(sortScientistsAgeOfLife === arr);
+
+
+// !Удалить из массива ученых, родившихся в 15, 16 или 17 веках.
+
+
+// const deleteSomeScientists = arr.filter((scientist) => { return scientist.born <= 1399 || scientist.born > 1700 });
+
+// const deleteSomeScientists = arr.filter((scientist) => scientist.born <= 1399 || scientist.born > 1700);
+
+
+// console.log(deleteSomeScientists);
+
+
+// !Найти ученого, который родился позже всех.
+
+// const lastBornScientist = ([...arr].sort((a, b) => { return a.born - b.born })).pop();
+
+
+// // const last = lastBornScientist.pop();
+
+// console.log(lastBornScientist);
+// // console.log(last);
+
+
+
+// !Найти год рождения Albert Einstein. 
+
+// const scientistName = "Einstein";
+
+// const einsteinAgeBirth = arr.find((elem) => {
+//     if ((elem.name.concat(" ", elem.surname)) || elem.name || elem.surname === scientistName) {
+
+//         return elem.born
+
+//     };
+// })
+
+// console.log(einsteinAgeBirth.born);
+
+
+
+// !Найти ученых, фамилия которых начинается на букву "С".
+
+// const scientistsNameStartsC = arr.filter(({ surname }) => {
+
+//     console.log(surname);
+//     return surname.startsWith("C")
+// })
+
+
+// const scientistsNameStartsC = arr.filter(({ surname }) => surname.toUpperCase().startsWith("C"));
+
+// console.log(scientistsNameStartsC);
+
+
+
+// !Удалить из массива всех ученых, имя которых начинается на букву "A".
+
+// const scientistsNameStartsA = arr.filter(({ name }) => !name.toUpperCase().startsWith("A"));
+
+// console.log(scientistsNameStartsA);
+
+
+// !Найти ученого, который прожил больше всех и ученого, который меньше.
+
+const sortScientistAgeLived = [...arr].sort((a, b) => (a.dead - a.born) - (b.dead - b.born));
+
+console.log(sortScientistAgeLived);
+
+const scientistAgeLivedMin = sortScientistAgeLived[0];
+
+const scientistAgeLivedMax = sortScientistAgeLived[sortScientistAgeLived.length - 1];
+
+
+
+
+console.log(scientistAgeLivedMin);
+console.log(scientistAgeLivedMax);
 // Найти ученых, у которых совпадают первые буквы имени и фамилии.
 //     Узнать, все ли ученые работали в 19 веке.
 
