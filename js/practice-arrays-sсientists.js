@@ -112,19 +112,30 @@ console.log("ok");
 
 // !Найти ученого, который прожил больше всех и ученого, который меньше.
 
-const sortScientistAgeLived = [...arr].sort((a, b) => (a.dead - a.born) - (b.dead - b.born));
+// const sortScientistAgeLived = [...arr].sort((a, b) => (a.dead - a.born) - (b.dead - b.born));
 
-console.log(sortScientistAgeLived);
+// console.log(sortScientistAgeLived);
 
-const scientistAgeLivedMin = sortScientistAgeLived[0];
+// const scientistAgeLivedMin = sortScientistAgeLived[0];
 
-const scientistAgeLivedMax = sortScientistAgeLived[sortScientistAgeLived.length - 1];
+// const scientistAgeLivedMax = sortScientistAgeLived[sortScientistAgeLived.length - 1];
+
+// console.log(scientistAgeLivedMin);
+// console.log(scientistAgeLivedMax);
+
+
+// !Найти ученых, у которых совпадают первые буквы имени и фамилии.
+
+// const scientistsWithCommonFirstLetters = arr.filter((scientist) => {
+//     return scientist.name.charAt(0) === scientist.surname.charAt(0)
+// })
+
+// console.log(scientistsWithCommonFirstLetters);
 
 
 
+//     !Узнать, все ли ученые работали в 19 веке.
 
-console.log(scientistAgeLivedMin);
-console.log(scientistAgeLivedMax);
-// Найти ученых, у которых совпадают первые буквы имени и фамилии.
-//     Узнать, все ли ученые работали в 19 веке.
+// const scientWhoNotWorkInIXX = arr.filter((scientist) => { return scientist.dead < 1810 || scientist.dead > 1895 })
 
+// console.log(scientWhoNotWorkInIXX);
